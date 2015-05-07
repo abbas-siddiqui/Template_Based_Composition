@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<schemas xmlns='http://xml.netbeans.org/schema/JAXBWizConfig' destdir='build/generated-sources/jaxb' projectName='Template_Demo' version='1.0'>
+	<schema type='-xmlschema' package='' name='RequirementsList'>
+		<xjc-options>
+		</xjc-options>
+		<schema-sources>
+			<schema-source location='xml-resources/jaxb/RequirementsList/RequirementsList.xsd' origLocation='../XML Schema/RequirementsList.xsd'/>
+		</schema-sources>
+		<bindings>
+		</bindings>
+		<catalog/>
+	</schema>
+	<schema type='-xmlschema' package='template_Description' name='template_Description'>
+		<xjc-options>
+		</xjc-options>
+		<schema-sources>
+			<schema-source location='xml-resources/jaxb/template_Description/Template_Description.xsd' origLocation='../XML Schema/Template_Description.xsd'/>
+		</schema-sources>
+		<bindings>
+		</bindings>
+		<catalog/>
+	</schema>
+	<schema type='-xmlschema' package='Workflow_Description' name='Workflow_Description'>
+		<xjc-options>
+		</xjc-options>
+		<schema-sources>
+			<schema-source location='xml-resources/jaxb/Workflow_Description/Workflow_Description.xsd' origLocation='Extra_Files/Descriptions/Workflow_Description.xsd'/>
+		</schema-sources>
+		<bindings>
+		</bindings>
+		<catalog/>
+	</schema>
+	<schema type='-xmlschema' package='reqdesc.requirements' name='ReqDes'>
+		<xjc-options>
+		</xjc-options>
+		<schema-sources>
+			<schema-source location='xml-resources/jaxb/ReqDes/Req_Desc.xsd' origLocation='Extra_Files/Descriptions/Req_Desc.xsd'/>
+		</schema-sources>
+		<bindings>
+		</bindings>
+		<catalog/>
+	</schema>
+	<schema type='-xmlschema' package='BB_Description' name='BB_Description'>
+		<xjc-options>
+		</xjc-options>
+		<schema-sources>
+			<schema-source location='xml-resources/jaxb/BB_Description/BB_Description.xsd' origLocation='Extra_Files/Descriptions/BB_Description.xsd'/>
+		</schema-sources>
+		<bindings>
+		</bindings>
+		<catalog/>
+	</schema>
+	<schema type='-xmlschema' package='Domain_Policies' name='Domain_Policies'>
+		<xjc-options>
+		</xjc-options>
+		<schema-sources>
+			<schema-source location='xml-resources/jaxb/Domain_Policies/DomainPolicies.xsd' origLocation='Extra_Files/Descriptions/DomainPolicies.xsd'/>
+		</schema-sources>
+		<bindings>
+		</bindings>
+		<catalog/>
+	</schema>
+	<schema type='-xmlschema' package='Network_Description' name='Network_Description'>
+		<xjc-options>
+		</xjc-options>
+		<schema-sources>
+			<schema-source location='xml-resources/jaxb/Network_Description/Offerings.xsd' origLocation='Extra_Files/Descriptions/Offerings.xsd'/>
+		</schema-sources>
+		<bindings>
+		</bindings>
+		<catalog/>
+	</schema>
+</schemas>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildingBlock BBID="Retransmission" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file://SHADOW/siddiqui/Project_Work/Berlin_Status_Meeting_2012/TemplateBasedApproach/Prototyp_Implemenation/Versions/Template_Demo/Extra_Files/Descriptions/BB_Description.xsd">
+	<Port PortID="up">			
+			<Offering>
+				<Effect>Data</Effect>
+				<Operator>=</Operator>
+				<Attribute Unit="ms"><Formula Type="value">true</Formula></Attribute>
+			</Offering>							
+		</Port>
+		<Port PortID="down">
+		<Offering>
+				<Effect>LossRatio</Effect>
+				<Operator>=</Operator>
+				<Attribute Unit="%">
+				<Formula Type="value">0</Formula>
+				</Attribute>
+		</Offering>
+			
+		</Port>
+		<Optional>
+		<QOS>
+			<Effect>delay</Effect>
+			<Operator>=</Operator>
+			<Attribute Unit="ms"><Formula Type="value">0</Formula></Attribute>
+		</QOS>
+		<QOS>
+			<Effect>imagequality</Effect>
+			<Operator>=</Operator>
+			<Attribute Unit="ms"><Formula Type="value">0</Formula></Attribute>
+		</QOS>
+		<QOS>
+			<Effect>bandwidth</Effect>
+			<Operator>=</Operator>
+			<Attribute Unit="bits"><Formula Type="value">0</Formula></Attribute>
+		</QOS>
+		<QOS>
+			<Effect>lossratio</Effect>
+			<Operator>=</Operator>
+			<Attribute Unit="%"><Formula Type="value">0</Formula></Attribute>
+		</QOS>		
+		</Optional>
+</BuildingBlock>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2012 rel. 2 (x64) (http://www.altova.com) by Markus Hillenbrand (University of Kaiserslautern) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Template">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="QoS_Parameters" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element name="QoS">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Effect" type="xs:token"/>
+										<xs:element name="Operator">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="="/>
+													<xs:enumeration value="=&gt;"/>
+													<xs:enumeration value="&lt;"/>
+													<xs:enumeration value="=&lt;"/>
+													<xs:enumeration value="&gt;"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="Attribute">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:token">
+														<xs:attribute name="Unit" type="xs:string" use="optional"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Domains">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element name="Domain">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:token">
+											<xs:attribute name="Name"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Placeholders">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element name="PlaceHolder">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ToggleEnable">
+											<xs:complexType>
+												<xs:attribute name="isToggle" type="xs:boolean" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Port" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence maxOccurs="unbounded">
+													<xs:element name="OfferedEffect">
+														<xs:complexType>
+															<xs:attribute name="Effect" type="xs:token" use="required"/>
+															<xs:attribute name="Operator" use="required">
+																<xs:simpleType>
+																	<xs:restriction base="xs:token">
+																		<xs:enumeration value="=&gt;"/>
+																		<xs:enumeration value="=&lt;"/>
+																		<xs:enumeration value="&lt;"/>
+																		<xs:enumeration value="&gt;"/>
+																		<xs:enumeration value="="/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="Attribute" type="xs:token" use="required"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="RequiredEffect" minOccurs="0">
+														<xs:complexType>
+															<xs:attribute name="Effect" type="xs:token" use="required"/>
+															<xs:attribute name="Operator" use="required">
+																<xs:simpleType>
+																	<xs:restriction base="xs:token">
+																		<xs:enumeration value="=&gt;"/>
+																		<xs:enumeration value="=&lt;"/>
+																		<xs:enumeration value="&lt;"/>
+																		<xs:enumeration value="&gt;"/>
+																		<xs:enumeration value="="/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="Attribute" type="xs:token" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="PortID" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="PreSelection" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="SuggestedBB">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="BB">
+																	<xs:complexType>
+																		<xs:attribute name="ID" use="required"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="PreSelectedBBs">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="BB" maxOccurs="unbounded">
+																	<xs:complexType>
+																		<xs:attribute name="ID" use="required"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="Name" use="required"/>
+									<xs:attribute name="ID" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Connections">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element name="Connection">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Port" maxOccurs="2">
+											<xs:complexType>
+												<xs:attribute name="PortID" type="xs:string" use="required"/>
+												<xs:attribute name="Placeholder" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CoveredEffects">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element name="CoveredEffect">
+								<xs:complexType>
+									<xs:attribute name="Effect" type="xs:token" use="required"/>
+									<xs:attribute name="Operator" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:token">
+												<xs:enumeration value="=&gt;"/>
+												<xs:enumeration value="=&lt;"/>
+												<xs:enumeration value="&lt;"/>
+												<xs:enumeration value="&gt;"/>
+												<xs:enumeration value="="/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="Attribute" type="xs:token"/>
+									<xs:attribute name="isToggle"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="Name"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

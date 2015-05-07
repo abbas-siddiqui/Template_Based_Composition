@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2012 rel. 2 sp1 (x64) (http://www.altova.com) by Markus Hillenbrand (University of Kaiserslautern) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="DomainsPolicies">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Domain" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Requirement" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Effect" type="xs:token"/>
+										<xs:element name="Operator">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="="/>
+													<xs:enumeration value="=>"/>
+													<xs:enumeration value="&lt;"/>
+													<xs:enumeration value="=&lt;"/>
+													<xs:enumeration value=">"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="Attribute">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:token">
+														<xs:attribute name="Unit" type="xs:string" use="optional"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Condition" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="IF">
+											<xs:complexType>
+												<xs:attribute name="Effect" type="xs:string" use="required"/>
+												<xs:attribute name="Operator" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="=&gt;"/>
+															<xs:enumeration value="=&lt;"/>
+															<xs:enumeration value="="/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="Attribute" type="xs:string" use="required"/>
+												<xs:attribute name="Unit" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Then">
+											<xs:complexType>
+												<xs:attribute name="Effect" type="xs:string" use="required"/>
+												<xs:attribute name="Operator" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="=&gt;"/>
+															<xs:enumeration value="=&lt;"/>
+															<xs:enumeration value="="/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="Attribute" type="xs:string" use="required"/>
+												<xs:attribute name="Unit" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="Name"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

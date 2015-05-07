@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+            *** GENERATED FROM xml_binding_cfg.xml - DO NOT EDIT  ***
+            *** Configure thru JAXB Wizard.                       ***
+        --><project name="Template_Demo_jaxb" default="default" basedir=".">
+    <target name="xjc-typedef-target" depends="-init-project">
+        <typedef classname="com.sun.tools.xjc.XJCTask" name="xjc" xmlns:s="http://xml.netbeans.org/schema/JAXBWizConfig">
+            <classpath path="${jaxbwiz.xjcdef.classpath}"/>
+        </typedef>
+    </target>
+    <target name="jaxb-clean-code-generation" depends="clean,jaxb-code-generation"/>
+    <target name="jaxb-code-generation" depends="xjc-typedef-target,-do-init,-init-macrodef-javac">
+        <mkdir dir="${build.generated.sources.dir}/jaxb" xmlns:s="http://xml.netbeans.org/schema/JAXBWizConfig"/>
+        <mkdir dir="build/generated/jaxbCache" xmlns:s="http://xml.netbeans.org/schema/JAXBWizConfig"/>
+        <mkdir dir="build/generated/jaxbCache/RequirementsList"/>
+        <xjc destdir="build/generated/jaxbCache/RequirementsList" catalog="catalog.xml">
+            <classpath>
+                <pathelement location="${src.dir}"/>
+                <pathelement path="${jaxbwiz.xjcrun.classpath}"/>
+            </classpath>
+            <arg value="-xmlschema"/>
+            <schema file="xml-resources/jaxb/RequirementsList/RequirementsList.xsd"/>
+            <depends file="xml-resources/jaxb/RequirementsList/RequirementsList.xsd"/>
+            <produces dir="build/generated/jaxbCache/RequirementsList"/>
+        </xjc>
+        <copy todir="${build.generated.sources.dir}/jaxb">
+            <fileset dir="build/generated/jaxbCache/RequirementsList"/>
+        </copy>
+        <mkdir dir="build/generated/jaxbCache/template_Description"/>
+        <xjc package="template_Description" destdir="build/generated/jaxbCache/template_Description" catalog="catalog.xml">
+            <classpath>
+                <pathelement location="${src.dir}"/>
+                <pathelement path="${jaxbwiz.xjcrun.classpath}"/>
+            </classpath>
+            <arg value="-xmlschema"/>
+            <schema file="xml-resources/jaxb/template_Description/Template_Description.xsd"/>
+            <depends file="xml-resources/jaxb/template_Description/Template_Description.xsd"/>
+            <produces dir="build/generated/jaxbCache/template_Description"/>
+        </xjc>
+        <copy todir="${build.generated.sources.dir}/jaxb">
+            <fileset dir="build/generated/jaxbCache/template_Description"/>
+        </copy>
+        <mkdir dir="build/generated/jaxbCache/Workflow_Description"/>
+        <xjc package="Workflow_Description" destdir="build/generated/jaxbCache/Workflow_Description" catalog="catalog.xml">
+            <classpath>
+                <pathelement location="${src.dir}"/>
+                <pathelement path="${jaxbwiz.xjcrun.classpath}"/>
+            </classpath>
+            <arg value="-xmlschema"/>
+            <schema file="xml-resources/jaxb/Workflow_Description/Workflow_Description.xsd"/>
+            <depends file="xml-resources/jaxb/Workflow_Description/Workflow_Description.xsd"/>
+            <produces dir="build/generated/jaxbCache/Workflow_Description"/>
+        </xjc>
+        <copy todir="${build.generated.sources.dir}/jaxb">
+            <fileset dir="build/generated/jaxbCache/Workflow_Description"/>
+        </copy>
+        <mkdir dir="build/generated/jaxbCache/ReqDes"/>
+        <xjc package="reqdesc.requirements" destdir="build/generated/jaxbCache/ReqDes" catalog="catalog.xml">
+            <classpath>
+                <pathelement location="${src.dir}"/>
+                <pathelement path="${jaxbwiz.xjcrun.classpath}"/>
+            </classpath>
+            <arg value="-xmlschema"/>
+            <schema file="xml-resources/jaxb/ReqDes/Req_Desc.xsd"/>
+            <depends file="xml-resources/jaxb/ReqDes/Req_Desc.xsd"/>
+            <produces dir="build/generated/jaxbCache/ReqDes"/>
+        </xjc>
+        <copy todir="${build.generated.sources.dir}/jaxb">
+            <fileset dir="build/generated/jaxbCache/ReqDes"/>
+        </copy>
+        <mkdir dir="build/generated/jaxbCache/BB_Description"/>
+        <xjc package="BB_Description" destdir="build/generated/jaxbCache/BB_Description" catalog="catalog.xml">
+            <classpath>
+                <pathelement location="${src.dir}"/>
+                <pathelement path="${jaxbwiz.xjcrun.classpath}"/>
+            </classpath>
+            <arg value="-xmlschema"/>
+            <schema file="xml-resources/jaxb/BB_Description/BB_Description.xsd"/>
+            <depends file="xml-resources/jaxb/BB_Description/BB_Description.xsd"/>
+            <produces dir="build/generated/jaxbCache/BB_Description"/>
+        </xjc>
+        <copy todir="${build.generated.sources.dir}/jaxb">
+            <fileset dir="build/generated/jaxbCache/BB_Description"/>
+        </copy>
+        <mkdir dir="build/generated/jaxbCache/Domain_Policies"/>
+        <xjc package="Domain_Policies" destdir="build/generated/jaxbCache/Domain_Policies" catalog="catalog.xml">
+            <classpath>
+                <pathelement location="${src.dir}"/>
+                <pathelement path="${jaxbwiz.xjcrun.classpath}"/>
+            </classpath>
+            <arg value="-xmlschema"/>
+            <schema file="xml-resources/jaxb/Domain_Policies/DomainPolicies.xsd"/>
+            <depends file="xml-resources/jaxb/Domain_Policies/DomainPolicies.xsd"/>
+            <produces dir="build/generated/jaxbCache/Domain_Policies"/>
+        </xjc>
+        <copy todir="${build.generated.sources.dir}/jaxb">
+            <fileset dir="build/generated/jaxbCache/Domain_Policies"/>
+        </copy>
+        <mkdir dir="build/generated/jaxbCache/Network_Description"/>
+        <xjc package="Network_Description" destdir="build/generated/jaxbCache/Network_Description" catalog="catalog.xml">
+            <classpath>
+                <pathelement location="${src.dir}"/>
+                <pathelement path="${jaxbwiz.xjcrun.classpath}"/>
+            </classpath>
+            <arg value="-xmlschema"/>
+            <schema file="xml-resources/jaxb/Network_Description/Offerings.xsd"/>
+            <depends file="xml-resources/jaxb/Network_Description/Offerings.xsd"/>
+            <produces dir="build/generated/jaxbCache/Network_Description"/>
+        </xjc>
+        <copy todir="${build.generated.sources.dir}/jaxb">
+            <fileset dir="build/generated/jaxbCache/Network_Description"/>
+        </copy>
+    </target>
+</project>
