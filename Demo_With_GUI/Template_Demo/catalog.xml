@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/home/siddiqui/Project_Work/Berlin_Status_Meeting_2012/TemplateBasedApproach/Prototyp_Implemenation/Template_Demo/../Extra_Files/RequirementsDatabase.xml" uri="xml-resources/jaxb/RequirementsList/RequirementsDatabase.xml"/>
+    <system systemId="file:/home/siddiqui/Project_Work/Berlin_Status_Meeting_2012/TemplateBasedApproach/Prototyp_Implemenation/Template_Demo/../XML%20Schema/RequirementsList.xsd" uri="xml-resources/jaxb/RequirementsList/RequirementsList.xsd"/>
+    <system systemId="file:/home/siddiqui/Project_Work/Berlin_Status_Meeting_2012/TemplateBasedApproach/Prototyp_Implemenation/Template_Demo/Extra_Files/TemplateDescriptionV2.xsd" uri="xml-resources/jaxb/testjaxb2/TemplateDescriptionV2.xsd"/>
+    <system systemId="file:/home/siddiqui/Project_Work/Berlin_Status_Meeting_2012/TemplateBasedApproach/Prototyp_Implemenation/Template_Demo/../XML%20Schema/Template_Description.xsd" uri="xml-resources/jaxb/template_Description/Template_Description.xsd"/>
+    <system systemId="file:/home/siddiqui/Project_Work/Berlin_Status_Meeting_2012/TemplateBasedApproach/Prototyp_Implemenation/Template_Demo/../XML%20Schema/descriptionschema.xsd" uri="xml-resources/jaxb/BB_Description/descriptionschema.xsd"/>
+    <system systemId="file:/home/siddiqui/Project_Work/Berlin_Status_Meeting_2012/TemplateBasedApproach/Prototyp_Implemenation/Template_Demo/Extra_Files/Descriptions/Workflow.xsd" uri="xml-resources/jaxb/Workflow_Description/Workflow.xsd"/>
+    <system systemId="file:/home/siddiqui/Project_Work/Berlin_Status_Meeting_2012/TemplateBasedApproach/Prototyp_Implemenation/Template_Demo/../XML%20Schema/Req_Desc.xsd" uri="xml-resources/jaxb/ReqDes/Req_Desc.xsd"/>
+    <system systemId="file:/home/siddiqui/Project_Work/Berlin_Status_Meeting_2012/TemplateBasedApproach/Prototyp_Implemenation/Template_Demo/Extra_Files/Descriptions/Req_Desc.xsd" uri="xml-resources/jaxb/ReqDes/Req_Desc.xsd"/>
+    <system systemId="file:/home/siddiqui/Project_Work/Berlin_Status_Meeting_2012/TemplateBasedApproach/Prototyp_Implemenation/Template_Demo/Extra_Files/Descriptions/BB_Description.xsd" uri="xml-resources/jaxb/BB_Description/BB_Description.xsd"/>
+    <system systemId="file:/home/siddiqui/Project_Work/Berlin_Status_Meeting_2012/TemplateBasedApproach/Prototyp_Implemenation/Template_Demo/Extra_Files/Descriptions/Workflow_Description.xsd" uri="xml-resources/jaxb/Workflow_Description/Workflow_Description.xsd"/>
+    <system systemId="file:/home/siddiqui/Project_Work/Berlin_Status_Meeting_2012/TemplateBasedApproach/Prototyp_Implemenation/Template_Demo/../XML%20Schema/DomainPolicies.xsd" uri="xml-resources/jaxb/Domain_Policies/DomainPolicies.xsd"/>
+    <system systemId="file:/home/siddiqui/Project_Work/Berlin_Status_Meeting_2012/TemplateBasedApproach/Prototyp_Implemenation/Template_Demo/Extra_Files/Descriptions/DomainPolicies.xsd" uri="xml-resources/jaxb/Domain_Policies/DomainPolicies.xsd"/>
+    <system systemId="file:/home/siddiqui/Project_Work/Berlin_Status_Meeting_2012/TemplateBasedApproach/Prototyp_Implemenation/Versions/Template_Demo/Extra_Files/Descriptions/Offerings.xsd" uri="xml-resources/jaxb/Network_Description/Offerings.xsd"/>
+</catalog>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : WorkflowDTD.dtd
+    Created on : October 21, 2009, 8:58 AM
+    Author     : lemming
+    Description:
+        Purpose of the document follows.
+
+    TODO define vocabulary identification data
+    PUBLIC ID  : -//vendor//vocabulary//EN
+    SYSTEM ID  : http://server/path/WorkflowDTD.dtd
+-->
+
+<!-- TODO define your own vocabulary/syntax. Example follows:  -->
+<!ELEMENT workflow (buildingblocks?, connections?)>
+<!ELEMENT buildingblocks (buildingblock*)>
+<!ELEMENT buildingblock EMPTY>
+<!ATTLIST buildingblock
+  id  ID  #REQUIRED
+  special CDATA #IMPLIED
+  uuid  CDATA #IMPLIED
+>
+<!ELEMENT connections (connection*)>
+<!ELEMENT connection (port, port)>
+<!ELEMENT port EMPTY>
+<!ATTLIST port
+  blockname  CDATA  #IMPLIED
+  blockid CDATA #REQUIRED
+  name  CDATA #IMPLIED
+  id  ID #REQUIRED
+>

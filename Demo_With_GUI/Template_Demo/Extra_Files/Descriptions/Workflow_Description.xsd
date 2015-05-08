@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2012 rel. 2 sp1 (x64) (http://www.altova.com) by Markus Hillenbrand (University of Kaiserslautern) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Workflow">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Optional" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Offering" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Effect" type="xs:token"/>
+										<xs:element name="Operator" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:token">
+													<xs:enumeration value="="/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="Attribute" minOccurs="0">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:token">
+														<xs:attribute name="Unit" type="xs:string" use="optional"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="buildingblocks">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="buildingblock" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Port" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="OfferedEffect" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:attribute name="Effect" type="xs:token" use="required"/>
+															<xs:attribute name="Operator" use="required">
+																<xs:simpleType>
+																	<xs:restriction base="xs:token">
+																		<xs:enumeration value="=&gt;"/>
+																		<xs:enumeration value="=&lt;"/>
+																		<xs:enumeration value="&lt;"/>
+																		<xs:enumeration value="&gt;"/>
+																		<xs:enumeration value="="/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="Attribute" type="xs:token" use="required"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="RequiredEffect" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:attribute name="Effect" type="xs:token" use="required"/>
+															<xs:attribute name="Operator" use="required">
+																<xs:simpleType>
+																	<xs:restriction base="xs:token">
+																		<xs:enumeration value="=&gt;"/>
+																		<xs:enumeration value="=&lt;"/>
+																		<xs:enumeration value="&lt;"/>
+																		<xs:enumeration value="&gt;"/>
+																		<xs:enumeration value="="/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+															<xs:attribute name="Attribute" type="xs:token" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="PortID" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="id" type="xs:token" use="required"/>
+									<xs:attribute name="uuid" type="xs:token"/>
+									<xs:attribute name="special" type="xs:token"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="connections">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="connection" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="port" maxOccurs="2">
+											<xs:complexType>
+												<xs:attribute name="blockname" type="xs:token"/>
+												<xs:attribute name="blockid" type="xs:anySimpleType" use="required"/>
+												<xs:attribute name="name" type="xs:anySimpleType"/>
+												<xs:attribute name="id" type="xs:token" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

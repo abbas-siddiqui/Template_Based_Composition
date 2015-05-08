@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Offerings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file://SHADOW/khondoker/workspace/AppParsingUpdated2/xml/Offerings.xsd">
+	<Optional>
+		<Offering>
+			<Effect>throughput</Effect>
+			<Operator>=</Operator>
+			<Attribute>3</Attribute>
+		</Offering>
+		<Offering>
+			<Effect>delay</Effect>
+			<Operator>=</Operator>
+			<Attribute>100</Attribute>
+		</Offering>
+		<Offering>
+			<Effect>keystrength</Effect>
+			<Operator>=</Operator>
+			<Attribute>0</Attribute>
+		</Offering>	
+		<Offering>
+			<Effect>lossratio</Effect>
+			<Operator>=</Operator>
+			<Attribute>0.5</Attribute>
+		</Offering>
+		<Offering>
+			<Effect>bandwidth</Effect>
+			<Operator>=</Operator>
+			<Attribute>4</Attribute>
+		</Offering>
+	</Optional>
+</Offerings>
+

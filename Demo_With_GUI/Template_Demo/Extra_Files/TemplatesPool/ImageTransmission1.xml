@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file://SHADOW/siddiqui/Project_Work/Berlin_Status_Meeting_2012/TemplateBasedApproach/Prototyp_Implemenation/Template_Demo/Extra_Files/Descriptions/Template_Description.xsd">
+		<Domains>
+		<Domain>ImageTransmission</Domain>
+	</Domains>
+	<Placeholders>
+		<PlaceHolder Name="app" ID=" 3">
+			<ToggleEnable isToggle="false"></ToggleEnable>
+			<Port PortID="6">
+				<OfferedEffect Effect="application" Operator="=" Attribute="true"/>
+			</Port>
+		</PlaceHolder>
+		<PlaceHolder Name="Retransmission" ID=" 2">
+			<ToggleEnable isToggle="false"></ToggleEnable>
+			<Port PortID="9">
+				<OfferedEffect Effect="Data" Operator="=" Attribute="true"></OfferedEffect>
+			</Port>
+			<Port PortID="2">
+				<OfferedEffect Effect="LossRatio" Operator="=" Attribute="0"></OfferedEffect>
+			</Port>
+		</PlaceHolder>		
+		<PlaceHolder Name="net" ID=" 3">
+			<ToggleEnable isToggle="false"></ToggleEnable>
+			<Port PortID="7">
+				<OfferedEffect Effect="net" Operator="=" Attribute="true"/>
+			</Port>
+		</PlaceHolder>
+	</Placeholders>
+	<Connections>	
+		<Connection>			
+			<Port PortID="6" Placeholder="app"/>
+			<Port PortID="9" Placeholder="Retransmission"></Port>
+		</Connection>
+		<Connection>			
+			<Port PortID="2" Placeholder="Retransmission"/>
+			<Port PortID="7" Placeholder="net"></Port>
+		</Connection>		
+	</Connections>
+	<CoveredEffects>
+		<CoveredEffect Effect="retransmission" Operator="=" Attribute=" true" isToggle="false"/>		
+	</CoveredEffects>
+</Template>

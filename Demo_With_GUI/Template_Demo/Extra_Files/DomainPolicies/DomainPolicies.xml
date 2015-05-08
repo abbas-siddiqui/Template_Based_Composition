@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DomainsPolicies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file://SHADOW/siddiqui/Project_Work/Berlin_Status_Meeting_2012/TemplateBasedApproach/Prototyp_Implemenation/Template_Demo/Extra_Files/Descriptions/DomainPolicies.xsd">
+		<Domain Name="DataTransmission">	
+	<Condition>
+		<IF Effect="bandwidth" Operator="=&lt;" Attribute="2" Unit="MB"></IF>
+		<Then Effect="DataReduction" Operator="=" Attribute="true"></Then>
+	</Condition>
+	</Domain>
+	<Domain Name="ImageTransmission">	
+	<Condition>
+		<IF Effect="bandwidth" Operator="=&lt;" Attribute="1" Unit="MB"></IF>
+		<Then Effect="DataReduction" Operator="=" Attribute="true"></Then>
+	</Condition>
+	</Domain>
+	<Domain Name="QualityTransmission">	
+	<Requirement>
+		<Effect>retransmission</Effect>
+		<Operator>=</Operator>
+		<Attribute>true</Attribute>
+	</Requirement>
+	</Domain>
+</DomainsPolicies>
