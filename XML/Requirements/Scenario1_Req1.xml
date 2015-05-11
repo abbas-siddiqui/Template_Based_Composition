@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Requirements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file://SHADOW/siddiqui/Project_Work/Berlin_Status_Meeting_2012/TemplateBasedApproach/Prototyp_Implemenation/Template_Demo/Extra_Files/Descriptions/Req_Desc.xsd">
+	<Domain>QualityTransmission</Domain>
+	<Requirement>
+		<Effect>retransmission</Effect>		
+		<Operator>=</Operator>		
+		<Attribute>true</Attribute>		
+	</Requirement>		
+</Requirements>

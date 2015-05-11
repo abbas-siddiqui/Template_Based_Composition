@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Template xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file://SHADOW/siddiqui/Project_Work/Berlin_Status_Meeting_2012/TemplateBasedApproach/Prototyp_Implemenation/Template_Demo/Extra_Files/Descriptions/Template_Description.xsd">
+		<Domains>
+		<Domain>ImageTransmission</Domain>
+	</Domains>
+	<Placeholders>
+		<PlaceHolder Name="app" ID="3">
+			<ToggleEnable isToggle="false"></ToggleEnable>
+			<Port PortID="6">
+				<OfferedEffect Effect="application" Operator="=" Attribute="true"/>
+			</Port>
+		</PlaceHolder>
+		<PlaceHolder Name="Compression" ID="2">
+			<ToggleEnable isToggle="false"></ToggleEnable>
+			<Port PortID="9">
+				<OfferedEffect Effect="Data" Operator="=" Attribute="true"></OfferedEffect>
+			</Port>
+			<Port PortID="2">
+				<OfferedEffect Effect="DataReduction" Operator="=" Attribute="true"></OfferedEffect>
+			</Port>
+		</PlaceHolder>
+		<PlaceHolder Name="Encryption" ID="5">
+			<ToggleEnable isToggle="false"></ToggleEnable>
+			<Port PortID="11">
+				<OfferedEffect Effect="Data" Operator="=" Attribute="true"></OfferedEffect>
+			</Port>
+			<Port PortID="12">
+				<OfferedEffect Effect="ciphering" Operator="=" Attribute="true"></OfferedEffect>
+			</Port>
+		</PlaceHolder>
+		<PlaceHolder Name="Retransmission" ID="4">
+			<ToggleEnable isToggle="false"></ToggleEnable>
+			<Port PortID="5">
+				<OfferedEffect Effect="Data" Operator="=" Attribute="true"></OfferedEffect>
+			</Port>
+			<Port PortID="8">
+				<OfferedEffect Effect="LossRatio" Operator="=" Attribute="0"></OfferedEffect>
+			</Port>
+		</PlaceHolder>		
+		<PlaceHolder Name="net" ID="6">
+			<ToggleEnable isToggle="false"></ToggleEnable>
+			<Port PortID="7">
+				<OfferedEffect Effect="net" Operator="=" Attribute="true"/>
+			</Port>
+		</PlaceHolder>
+	</Placeholders>
+	<Connections>	
+		<Connection>			
+			<Port PortID="6" Placeholder="app"/>
+			<Port PortID="9" Placeholder="Compression"></Port>
+		</Connection>
+		<Connection>			
+			<Port PortID="2" Placeholder="Compression"/>
+			<Port PortID="11" Placeholder="Encryption"></Port>
+		</Connection>
+		<Connection>			
+			<Port PortID="12" Placeholder="Encryption"/>
+			<Port PortID="5" Placeholder="Retransmission"></Port>
+		</Connection>	
+		<Connection>			
+			<Port PortID="8" Placeholder="Retransmission"/>
+			<Port PortID="7" Placeholder="net"></Port>
+		</Connection>
+	</Connections>
+	<CoveredEffects>	
+		<CoveredEffect Effect="retransmission" Operator="=" Attribute=" true" isToggle="false"/>	
+		<CoveredEffect Effect="ciphering" Operator="=" Attribute=" true" isToggle="false"/>
+		<CoveredEffect Effect="DataReduction" Operator="=" Attribute=" true" isToggle="false"/>		
+	</CoveredEffects>
+</Template>
